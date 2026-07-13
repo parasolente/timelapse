@@ -16,10 +16,10 @@ RUN npm run build
 FROM python:3.12-slim
 
 WORKDIR /app/backend
+COPY --from=backend /usr/local/lib/python3.12/site-packages /usr/local/lib/python3.12/site-packages
+COPY --from=backend /usr/local/bin /usr/local/bin
 COPY --from=backend /app/backend /app/backend
 COPY --from=frontend /app/frontend/dist /app/frontend/dist
-
-RUN pip install --no-cache-dir gunicorn==23.0.0
 
 EXPOSE 8000
 
