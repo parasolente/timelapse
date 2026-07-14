@@ -6,7 +6,6 @@ asyncpg==0.30.0
 alembic==1.14.1
 pydantic==2.10.4
 pydantic-settings==2.7.1
-passlib[bcrypt]==1.7.4
 pyjwt==2.10.1
 python-multipart==0.0.19
 structlog==24.4.0
